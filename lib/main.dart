@@ -30,12 +30,11 @@ class testPage extends StatefulWidget {
 }
 
 class _testPageState extends State<testPage> {
-  @override
   int _selectedIndex = 0;
 
-  final List<Widget> _widgetOptions=[
-    Text("Home"),
-    Text("Dashboard"),
+  static const List<Widget> _widgetOptions=[
+    Text("Hoddme"),
+    Text("Dasgrfhboard"),
     Text("Account"),
   ];
 
@@ -45,7 +44,7 @@ class _testPageState extends State<testPage> {
     });
   }
 
-
+  @override   
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -74,8 +73,8 @@ class _testPageState extends State<testPage> {
             label: 'Account',
           )
         ],
-        onTap: ontapItem,
         currentIndex: _selectedIndex,
+        onTap: ontapItem,
       ),
       
     );
