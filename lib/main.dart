@@ -33,8 +33,8 @@ class _testPageState extends State<testPage> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions=[
-    Text("Hoddme"),
-    Text("Dasgrfhboard"),
+    Text("Home"),
+    Text("Dashboard"),
     Text("Account"),
   ];
 
