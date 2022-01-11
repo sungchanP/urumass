@@ -41,36 +41,49 @@ class _DashboardState extends State<Dashboard> {
                 height: 50,
                 width: double.infinity,
                 padding: const EdgeInsets.only(left: 60),
-                child: Text("1st board"),
+                child: Align(
+                  child: Text("1st board"),
+                  alignment: Alignment.centerLeft
+                  ),
               ),
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => FirstBoard()));
+                _openFirstBoard(context);
               },
             ),
             Container(
               height: 50,
               width: double.infinity,
               padding: const EdgeInsets.only(left: 60),
-              child: Text("2nd board"),
+              //decoration: dashboardDeco,
+              child: Align(
+                child: Text("2nd board"), 
+                alignment: Alignment.centerLeft,
+                ),
             ),
             Container(
               height: 50,
               width: double.infinity,
               padding: const EdgeInsets.only(left: 60),
-              child: Text("3rd board"),
+              child: Align(
+                child: Text("3rd board"),
+                alignment: Alignment.centerLeft,
+                ),
             ),
             Container(
               height: 50,
               width: double.infinity,
               padding: const EdgeInsets.only(left: 60),
-              child: Text("4th board"),
+              child: Align(
+                child: Text("4th board"),
+                alignment: Alignment.centerLeft,
+                ),
             ),
           ],
         ),
       ),
       SizedBox(height: 50,),
       Container(
-        height: 300,
+        height: 600,
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.black,
@@ -83,6 +96,9 @@ class _DashboardState extends State<Dashboard> {
       )  
     ]
   );
+  }
+  _openFirstBoard(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => FirstBoard()));
   }
 }
 

@@ -1,3 +1,5 @@
+import 'package:custom_navigator/custom_navigator.dart';
+import 'package:custom_navigator/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:urumass/account.dart';
 import 'package:urumass/class.dart';
@@ -36,13 +38,7 @@ class testPage extends StatefulWidget {
 
 class _testPageState extends State<testPage> {
   int _selectedIndex = 0;
-
-  static const List<Widget> _widgetOptions=[
-    Home(),
-    Dashboard(),
-    Class(),
-    Account(),
-  ];
+  GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   void ontapItem(int index){
     setState(() {
@@ -52,21 +48,10 @@ class _testPageState extends State<testPage> {
 
   @override   
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "UrUmass", 
-          style: TextStyle(
-            color: Colors.black
-            ),
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),    
-      body: _widgetOptions.elementAt(_selectedIndex),  
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
+    return CustomScaffold(
+      scaffold: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             activeIcon: Icon(Icons.home),
@@ -88,10 +73,15 @@ class _testPageState extends State<testPage> {
             label: 'Account',
           ),
         ],
-        currentIndex: _selectedIndex,
-        onTap: ontapItem,
-        selectedItemColor: Colors.black,
+        ),
       ),
+      children: <Widget>[
+        Home(),
+        Dashboard(),
+        Class(),
+        Account(),
+      ],
+      onItemTap: (index) {},
     );
   }
 }
