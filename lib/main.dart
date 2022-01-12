@@ -3,6 +3,8 @@ import 'package:urumass/account.dart';
 import 'package:urumass/class.dart';
 import 'package:urumass/dashboard.dart';
 import 'package:urumass/home.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 void main() {
   runApp(const MyApp());
