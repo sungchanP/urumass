@@ -16,7 +16,8 @@ class _DashboardState extends State<Dashboard> {
     border: Border.all(
       color: Colors.black,
       width: 1.0,
-    )
+      
+    ),
   );
 
   return ListView(
@@ -24,6 +25,7 @@ class _DashboardState extends State<Dashboard> {
     children: [
       Container(
         height: 300,
+        /*
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.black,
@@ -33,15 +35,28 @@ class _DashboardState extends State<Dashboard> {
             Radius.circular(10)
             ),
         ),
+        */
         child: Column(
           children: [
-            Padding(padding: EdgeInsets.only(top: 50)),
+            Container(
+              //padding: EdgeInsets.only(top: 10),
+              child: Align(
+                child: Text(
+                  "Dashboard",
+                  style: TextStyle(fontSize: 25),
+                ),
+                alignment: Alignment.centerLeft,
+              ),
+              //decoration: dashboardDeco,
+            ),
+            Padding(padding: EdgeInsets.only(top: 10)),
             InkWell(
               child: Container(
                 height: 50,
                 width: double.infinity,
-                padding: const EdgeInsets.only(left: 60),
-                child: Text("1st board"),
+                padding: const EdgeInsets.only(left: 40),
+                child: Align(child: Text("College Info"), alignment: Alignment.centerLeft,),
+                //decoration: dashboardDeco,
               ),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => FirstBoard()));
@@ -50,20 +65,20 @@ class _DashboardState extends State<Dashboard> {
             Container(
               height: 50,
               width: double.infinity,
-              padding: const EdgeInsets.only(left: 60),
-              child: Text("2nd board"),
+              padding: const EdgeInsets.only(left: 40),
+              child: Align(child: Text("Class/Professor Info"), alignment: Alignment.centerLeft,),
             ),
             Container(
               height: 50,
               width: double.infinity,
-              padding: const EdgeInsets.only(left: 60),
-              child: Text("3rd board"),
+              padding: const EdgeInsets.only(left: 40),
+              child: Align(child: Text("Free Board"), alignment: Alignment.centerLeft,),
             ),
             Container(
               height: 50,
               width: double.infinity,
-              padding: const EdgeInsets.only(left: 60),
-              child: Text("4th board"),
+              padding: const EdgeInsets.only(left: 40),
+              child: Align(child: Text("Events Board"), alignment: Alignment.centerLeft,),
             ),
           ],
         ),

@@ -10,8 +10,16 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    String user = "Sungchan";
     return Container(
-      
+      padding: EdgeInsets.only(top: 20, left: 40),
+      //decoration: BoxDecoration(border: Border.all(width: 1)),
+      child: Text(
+        "Welcome, $user!",
+        style: TextStyle(
+          fontSize: 18),
+      ),
+
     );
   }
 }

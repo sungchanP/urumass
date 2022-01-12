@@ -18,8 +18,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'UrUmass',
       theme: ThemeData(
-        brightness: Brightness.light,
+        //brightness: Brightness.light,
         fontFamily: 'PT_Sans',
+        textTheme: Theme.of(context).textTheme.apply(bodyColor: Colors.black),
       ),
 
       home: testPage(),
@@ -62,6 +63,13 @@ class _testPageState extends State<testPage> {
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
+        shape: Border(
+          bottom: BorderSide(
+            color: Colors.black,
+            width: 0.1,
+          ),
+          
+        ),
       ),    
       body: _widgetOptions.elementAt(_selectedIndex),  
       bottomNavigationBar: BottomNavigationBar(
