@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "349047233587",
+    "project_id": "collegeapp-a3f8f",
+    "storage_bucket": "collegeapp-a3f8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349047233587:android:028440f6e0b38e99719746",
+        "android_client_info": {
+          "package_name": "com.example.urumass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349047233587-0pmkp3qtt94lo14p1agffc9lt3ssq585.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf90L2nL4b-GEnPtJgu5u5zucedIjDULs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349047233587-0pmkp3qtt94lo14p1agffc9lt3ssq585.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "349047233587-q53m4tur3i7h31u01ejgc4mfct45hkm7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.urumass"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
